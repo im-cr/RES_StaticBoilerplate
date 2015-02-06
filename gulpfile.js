@@ -17,11 +17,11 @@ var sass = require('gulp-sass'),
 
 
 var paths = {
-   html    : "./*.html",
-   sass    : "./assets/css/sass/**/*.scss",
-   css     : "./assets/css/",
-   jssrc   : "./assets/js/src/*.js",
-   js      : "./assets/js/"
+   html    : "./app/*.html",
+   sass    : "./app/assets/css/sass/**/*.scss",
+   css     : "./app/assets/css/",
+   jssrc   : "./app/assets/js/src/*.js",
+   js      : "./app/assets/js/"
 }
 
 gulp.task('html',function(){
@@ -66,6 +66,8 @@ gulp.task('watch',function(){
 //-----------------------------------------------
 gulp.task('webserver',function(){
    connect.server({
+      root: 'app',
+      port: 9001,
       livereload : true
    });
 });
