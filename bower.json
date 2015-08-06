@@ -23,9 +23,9 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass-official": "~3.3.5",
     "jquery": "~2.1.4",
     "angular": "~1.4.3",
-    "sass-mq": "~3.2.3"
+    "sass-mq": "~3.2.3",
+    "bootstrap-sass-only": "~3.4.4"
   }
 }
