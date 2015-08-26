@@ -1,0 +1,23 @@
+//---------------------------------- utilities
+@mixin clearfix {
+    &:before,&:after {
+        content: "";
+        display: table;
+    }
+    &:after{
+        clear: both;
+    }
+}
+
+
+@mixin img-responsive($display: block) {
+  display: $display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+//---------------------------------- Interaction
+@mixin transitions($property: all, $time: .2s, $type: ease-in-out){
+  transition: $property $time $type;
+
+}

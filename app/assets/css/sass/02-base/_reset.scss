@@ -1,0 +1,37 @@
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,code, pre,sub,sup, form, label,legend,
+fieldset, input, p, blockquote,th,tr,td,iframe,address,article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section,span,svg,sub,sup, summary,time, mark, audio, video{
+    border:0;
+    margin:0;
+    padding:0;
+    position:relative;
+    vertical-align:baseline;
+
+    /*BORDER/PADDING SIZING*/
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+
+     /*BACKGROUND CLIPPING*/
+    -webkit-background-clip:padding-box;
+    -moz-background-clip:padding-box;
+    background-clip:padding-box;
+
+}
+
+ul {
+    list-style:none;
+}
+
+a {
+    text-decoration:none;
+
+    p {
+        color:inherit;
+     }
+
+     img {
+        border:none;
+        outline:none;
+     }
+}

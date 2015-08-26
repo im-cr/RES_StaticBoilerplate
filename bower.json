@@ -26,6 +26,8 @@
     "jquery": "~2.1.4",
     "angular": "~1.4.3",
     "sass-mq": "~3.2.3",
-    "bootstrap-sass-only": "~3.4.4"
+    "bootstrap-sass-only": "~3.4.4",
+    "normalize-scss": "~3.0.3",
+    "enquire": "~2.1.2"
   }
 }

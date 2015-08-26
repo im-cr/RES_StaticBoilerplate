@@ -1,0 +1,33 @@
+//------------------- GRID SETTINGS
+$grid-columns               :   12 !default;
+$grid-gutter-width          :   30px !default;
+$grid-i                     :   0;
+
+//---------------------------------------- SCREEN SIZES
+$screen-xs      :      480px;
+$screen-sm      :      767px;
+$screen-md      :      960px;
+$screen-lg      :      1140px;
+
+//---------------------------------------- COLOR PALLETTE
+
+//BACKGROUND COLORS
+$bg-base        :   #1e1e1e;
+$bg-primary     :   #000000;
+$bg-secondary   :   #030303;
+
+//TEXT COLORS
+$text-color     :   #333333;
+$link-color     :   #0000ff;
+$link-hover     :   #00ff00;
+
+
+
+//---------------------------------------- TYPE SETTINGS
+$font-size-default      :  16px;
+$line-height-default    :  1.4;
+$font-sans              : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-serif             : Georgia, 'Times New Roman', serif;
+
+//--------- MOBILE FONT SIZES
+$mobile-font-default    :  1rem;
