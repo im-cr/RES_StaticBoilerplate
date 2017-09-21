@@ -37,7 +37,7 @@ var paths = {
    jsv     : "./app/assets/js/vendor/*.js",
    srcjs   : "./app/assets/js/src/*.js",
    js      : "./app/assets/js/",
-   pages   : "./app/templates/__pages/**/*.nunjucks",
+   pages   : "./app/pages/**/*.nunjucks",
    jucks   :"./app/templates/**/*.nunjucks",
    csspublic : "./app/__public/css/",
    jspublic  : "./app/__public/js/"
