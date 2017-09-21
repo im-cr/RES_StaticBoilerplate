@@ -30,15 +30,17 @@ var browserSync = require('browser-sync').create(),
 
 // ------------------------------- DIR/FILE PATHS
 var paths = {
-    public   : "./app/__public/",
-    html     : "./app/*.html",
-    sass     : "./app/assets/css/sass/**/*.scss",
-    css      : "./app/assets/css/",
-    jsv      : "./app/assets/js/vendor/*.js",
-    srcjs    : "./app/assets/js/src/*.js",
-    js       : "./app/assets/js/",
-    pages    : "./app/pages/**/*.nunjucks",
-    jucks    : "./app/templates/**/*.nunjucks"
+   public  : "./app/__public",
+   html    : "./app/*.html",
+   sass    : "./app/assets/css/sass/**/*.scss",
+   css     : "./app/assets/css/",
+   jsv     : "./app/assets/js/vendor/*.js",
+   srcjs   : "./app/assets/js/src/*.js",
+   js      : "./app/assets/js/",
+   pages   : "./app/templates/__pages/**/*.nunjucks",
+   jucks   :"./app/templates/**/*.nunjucks",
+   csspublic : "./app/__public/css/",
+   jspublic  : "./app/__public/js/"
 }
 
 // ------------------------------- MARKUP TASKS
@@ -56,8 +58,8 @@ gulp.task('styles',function(){
    .pipe(sass())
    .pipe(prefix('last 2 versions'))
    .pipe(cssmin())
-   .pipe(rename('style.public.css'))
-   .pipe(gulp.dest(paths.public))
+   .pipe(rename('style.public.min.css'))
+   .pipe(gulp.dest(paths.csspublic))
    .pipe(rename('style.min.css'))
    .pipe(gulp.dest(paths.css));
 });
@@ -69,7 +71,9 @@ gulp.task('scripts',function(){
   var myjs = gulp.src(paths.srcjs)
    .pipe(changed(paths.srcjs))
    .pipe(concat('scripts.js'))
-   .pipe(gulp.dest(paths.js));
+   .pipe(gulp.dest(paths.js))
+   .pipe(concat('scripts.public.js'))
+   .pipe(gulp.dest(paths.jspublic));
 
    var vendorjs = gulp.src(paths.jsv)
    .pipe(concat('vendor.js'))
@@ -116,7 +120,11 @@ gulp.task('webserver',function(){
   browserSync.init({
     port: 9001,
     open: false,
-    server: "./app/__public",
+    server: {
+      baseDir: ["./app/__public","./app/assets"]
+      //directory: true
+      //"./app/__public",
+    }
     //browser: ["google chrome", "safari"]
   });
   gulp.watch([paths.html,paths.sass,paths.srcjs,paths.jucks,paths.pages]).on('change', reload);
