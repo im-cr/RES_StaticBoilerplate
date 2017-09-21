@@ -1,0 +1,23 @@
+<!-- layout.nunjucks -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dreamhost Home</title>
+  	<link rel="stylesheet" href="../style.public.css" />
+  	<!--<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,500,700" rel="stylesheet">-->
+	<script src="https://use.fontawesome.com/fb346b3620.js"></script>
+</head>
+<body>
+
+{% include "../__utils/header.nunjucks" %}
+
+	{% block content %}
+	{% endblock %}
+
+{% include "../__utils/footer.nunjucks" %}
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="../assets/js/scripts.js"></script>
+</body>
+</html>
